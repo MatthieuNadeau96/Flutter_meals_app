@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'package:meals_app/categories_screen.dart';
+import './categories_screen.dart';
+import './category_meals_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final routeArgs =
+        ModalRoute.of(context).settings.arguments as Map<String, String>;
+    final categoryTitle = routeArgs['title'];
+    final categoryId = routeArgs['id'];
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
@@ -30,6 +35,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: CategoriesScreen(),
+      routes: {
+        '/categories-meals': (ctx) => CategoryMealsScreen(),
+      },
     );
   }
 }
