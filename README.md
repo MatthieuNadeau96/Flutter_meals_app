@@ -1,16 +1,29 @@
-# meals_app
+# Meals App
 
-A new Flutter project.
+A flutter application 
 
-## Getting Started
+![alt text](https://cdn.iconscout.com/icon/free/png-256/flutter-2038877-1720090.png "Flutter Icon")
 
-This project is a starting point for a Flutter application.
+## What I learned
 
-A few resources to get you started if this is your first Flutter project:
+### Navigation Basics
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- "Screens" (or "Routes", "Pages") are just widgets
+- The Flutter Navigator allows you to switch (push/pop/replace) between pages
+- That you can use named routes or unnamed routes
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Passing Data
+
+- That data can be passed between pages via arguments (directly or via "arguments" key)
+- Data can be passed back, too (read via Future)
+- Data can be anything. (strings, ints, objects..)
+
+### Tabs
+
+- That you can add tabs in the AppBar or at the bottom of the page
+- Tabs allow you to switch between different stacks (i.e. no popping)
+
+### Drawers & Dialogs
+
+- Drawers (side menus) also allow you to switch between different stacks
+- Drawers and other dialogs (e.g. alerts, modal bottom sheet) can be closed via Navigator.pop()
